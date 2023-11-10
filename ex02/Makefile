@@ -1,4 +1,4 @@
-NAME = ItsATrap
+NAME = Animal
 
 SRCS = AAnimal.cpp \
 	Brain.cpp \

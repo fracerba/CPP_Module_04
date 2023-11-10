@@ -1,4 +1,4 @@
-NAME = ItsATrap
+NAME = DarkMaterials
 
 SRCS = AMateria.cpp \
 	Character.cpp \
