@@ -3,12 +3,11 @@
 
 #include <string>
 #include <iostream>
-#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
 class Character : public ICharacter
 {
-    protected:
+    private:
         std::string name;
         AMateria* slots[4];
         AMateria* drops;
