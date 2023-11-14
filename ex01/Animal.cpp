@@ -29,9 +29,9 @@ std::string Animal::getType(void) const
     return(this->type);
 }
 
-void Animal::setType(std::string type)
+void Animal::setType(std::string Type)
 {
-    this->type = type;
+    this->type = Type;
 }
 
 void Animal::makeSound(void) const
