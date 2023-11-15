@@ -10,8 +10,9 @@ Dog::Dog()
 Dog::Dog(const Dog &Clap)
 {
     std::cout<<"Dog Copy constructor called\n";
+    this->type = Clap.getType();
     this->brain = new Brain();
-    *this = Clap;
+    this->brain = Clap.brain;
 }
 
 Dog::~Dog()
@@ -24,6 +25,7 @@ Dog& Dog::operator=(const Dog &Clap)
 {
     std::cout<<"Dog Copy assignment operator called\n";
     this->type = Clap.getType();
+    this->brain = new Brain();
     this->brain = Clap.brain;
     return(*this);
 }

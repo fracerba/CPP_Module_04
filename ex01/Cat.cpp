@@ -10,8 +10,9 @@ Cat::Cat()
 Cat::Cat(const Cat &Clap)
 {
     std::cout<<"Cat Copy constructor called\n";
+    this->type = Clap.getType();
     this->brain = new Brain();
-    *this = Clap;
+    this->brain = Clap.brain;
 }
 
 Cat::~Cat()
@@ -24,6 +25,7 @@ Cat& Cat::operator=(const Cat &Clap)
 {
     std::cout<<"Cat Copy assignment operator called\n";
     this->type = Clap.getType();
+    this->brain = new Brain();
     this->brain = Clap.brain;
     return(*this);
 }

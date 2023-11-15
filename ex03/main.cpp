@@ -30,6 +30,7 @@ int main()
     me->use(0, *bob);
     me->use(1, *bob);
 
+    me->unequip(1);
     std::cout<<std::endl;
     delete bob;
     std::cout<<std::endl;
