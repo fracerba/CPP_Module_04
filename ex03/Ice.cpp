@@ -9,6 +9,7 @@ Ice::Ice()
 Ice::Ice(const Ice &Materia)
 {
     std::cout<<"Ice Copy constructor called\n";
+    this->type = "ice";
     *this = Materia;
 }
 
@@ -20,7 +21,9 @@ Ice::~Ice()
 Ice& Ice::operator=(const Ice &Materia)
 {
     std::cout<<"Ice Copy assignment operator called\n";
-    this->type = Materia.getType();
+    if (this == &Materia)
+        ;
+    this->type = "ice";
     return(*this);
 }
 

@@ -9,6 +9,7 @@ AMateria::AMateria()
 AMateria::AMateria(const AMateria &Materia)
 {
     std::cout<<"AMateria Copy constructor called\n";
+    this->type = "Void";
     *this = Materia;
 }
 
@@ -20,7 +21,9 @@ AMateria::~AMateria()
 AMateria& AMateria::operator=(const AMateria &Materia)
 {
     std::cout<<"AMateria Copy assignment operator called\n";
-    this->type = Materia.getType();
+    if (this == &Materia)
+        ;
+    this->type = "Void";
     return(*this);
 }
 

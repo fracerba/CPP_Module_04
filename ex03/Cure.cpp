@@ -9,6 +9,7 @@ Cure::Cure()
 Cure::Cure(const Cure &Materia)
 {
     std::cout<<"Cure Copy constructor called\n";
+    this->type = "cure";
     *this = Materia;
 }
 
@@ -20,7 +21,9 @@ Cure::~Cure()
 Cure& Cure::operator=(const Cure &Materia)
 {
     std::cout<<"Cure Copy assignment operator called\n";
-    this->type = Materia.getType();
+    if (this == &Materia)
+        ;
+    this->type = "cure";
     return(*this);
 }
 
